@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/AlphaBlendBothSides.unity
+- path: Assets/Scenes/Shadow.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
