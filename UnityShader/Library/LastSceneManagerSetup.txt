@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Shadow.unity
+- path: Assets/Scenes/Grabpass.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
