@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Grabpass.unity
+- path: Assets/Scenes/ScrollingBackGround.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
