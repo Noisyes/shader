@@ -50,10 +50,10 @@
 
             fixed4 frag(v2f i) :SV_TARGET
             {
-                float time = _Time.y * _Speed;
+                float time = floor(_Time.y * _Speed);
                 float row = floor(time/_HorizontalAmount);
                 float column = time - row * _HorizontalAmount;
-                half2 uv = i.uv + half2(row,-column);
+                half2 uv = i.uv + half2(column,-row);
                 uv.x /= _HorizontalAmount;
                 uv.y /= _VerticalAmount;
                 fixed4 c = tex2D(_MainTex,uv);
