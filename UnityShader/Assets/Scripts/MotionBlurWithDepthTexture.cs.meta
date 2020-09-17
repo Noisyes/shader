@@ -3,7 +3,9 @@ guid: 73e0133b24293e7418568a85d1d2f3ed
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - MotionBlurWithDepthShader: {fileID: 4800000, guid: 70c8a240f24f5094583467ac547cfa7f,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

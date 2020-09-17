@@ -34,4 +34,22 @@ public class MotionBlurWithDepthTexture : PostEffectBase
     {
         camera.depthTextureMode |= DepthTextureMode.Depth;
     }
+
+    private void OnRenderImage(RenderTexture source, RenderTexture destination)
+    {
+        if(material != null)
+        {
+            material.SetFloat("_BlurSize", blurSize);
+            material.SetMatrix("_PreviousViewProjectionMatrix", previousViewProjectionMatrix);
+            Matrix4x4 currentViewProjectionMatrix = camera.projectionMatrix * camera.worldToCameraMatrix;
+            Matrix4x4 currentViewProjecitonInverseMatrix = currentViewProjectionMatrix.inverse;
+            material.SetMatrix("_CurrentViewProjectionInverseMatrix", currentViewProjecitonInverseMatrix);
+            previousViewProjectionMatrix = currentViewProjectionMatrix;
+            Graphics.Blit(source, destination, material);
+        }
+        else
+        {
+            Graphics.Blit(source, destination);
+        }
+    }
 }
