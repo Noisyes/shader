@@ -23,15 +23,8 @@ Shader "Chapter 14/Toon Shader"
             CGPROGRAM
             #pragma vertex vert 
             #pragma fragment frag
-            fixed4 _Color;
-            sampler2D _MainTex;
-            float4 _MainTex_ST;
-            sampler2D _Ramp;
-            fixed4 _Ramp_ST;
             float _Outline;
             fixed4 _OutlineColor;
-            fixed4 _Specular;
-            float _SpecularScale;
             struct a2v
             {
                 float4 vertex : POSITION;
